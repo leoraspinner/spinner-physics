@@ -12,7 +12,7 @@ public class Force
         this.magnitude = magnitude;
     }
 
-    public Force add(Force force){
+    public Force add(Force force) {
 
         double degree1 = Math.toRadians(this.degrees);
         double degree2 = Math.toRadians(this.degrees);
