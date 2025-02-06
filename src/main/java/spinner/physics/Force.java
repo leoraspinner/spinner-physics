@@ -11,16 +11,25 @@ public class Force
         this.degrees = degrees;
         this.magnitude = magnitude;
     }
+    public double getDegree()
+    {
+        return degrees;
+    }
+
+    public double getMagnitude()
+    {
+        return magnitude;
+    }
 
     public Force add(Force force) {
 
         double degree1 = Math.toRadians(this.degrees);
-        double degree2 = Math.toRadians(this.degrees);
+        double degree2 = Math.toRadians(force.degrees);
 
         double x1 = this.magnitude * Math.cos(degree1);
         double y1 = this.magnitude * Math.sin(degree1);
-        double x2 = this.magnitude * Math.cos(degree2);
-        double y2 = this.magnitude * Math.sin(degree2);
+        double x2 = force.magnitude * Math.cos(degree2);
+        double y2 = force.magnitude * Math.sin(degree2);
 
         double resultx = x1 + x2;
         double resulty = y1 + y2;
@@ -31,6 +40,7 @@ public class Force
         return new Force(resultantAngle, resultantMagnitude);
 
     }
+
 
 
 }
